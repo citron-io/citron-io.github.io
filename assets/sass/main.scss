@@ -987,6 +987,7 @@
 			opacity: 1;
 			position: relative;
 			z-index: 1;
+			text-align: center;
 
 			.actions {
 				@include vendor('transition', 'transform 1.25s ease');
