@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-	Photon by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>Citron</title>
@@ -11,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="assets/css/animate.css" rel="stylesheet">
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
@@ -21,7 +18,17 @@
 				<div class="inner">
 					<span class="icon major fa-lemon-o"></span>
 					<h1><strong>Citron</strong></h1>
-					<p><strong>Artificial Intelligence | Machine Learning | Blockchain</strong></p>
+					<h3 class="tlt">
+						<ul class="texts">
+							<li data-in-effect="fadeIn" data-out-effect="fadeOut">Artificial Intelligence</li>
+							<li data-in-effect="fadeIn" data-out-effect="fadeOut">Machine Learning</li>
+							<li data-in-effect="fadeIn" data-out-effect="fadeOut">Blockchain</li>
+							<li data-in-effect="fadeIn" data-out-effect="fadeOut">Neural Networks</li>
+							<li data-in-effect="fadeIn" data-out-effect="fadeOut">Deep Learning</li>
+							<li data-in-effect="fadeIn" data-out-effect="fadeOut">Artificial Intelligence | Machine Learning | Blockchain</li>
+						</ul>
+					</h3>
+					<!-- <p><strong>Artificial Intelligence | Machine Learning | Blockchain</strong></p> -->
 					<!-- <ul class="actions">
 						<li><a href="#three" class="button scrolly">Discover</a></li>
 					</ul> -->
@@ -461,7 +468,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/jquery.fittext.js"></script>
+			<script src="assets/js/jquery.lettering.js"></script>
+			<script src="assets/js/jquery.textillate.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				$('.tlt').textillate();
+			</script>
+
 
 	</body>
 </html>
