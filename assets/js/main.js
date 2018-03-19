@@ -1,44 +1,1 @@
-
-
-(function($) {
-
-	skel.breakpoints({
-		xlarge: '(max-width: 1680px)',
-		large: '(max-width: 1140px)',
-		medium: '(max-width: 980px)',
-		small: '(max-width: 736px)',
-		xsmall: '(max-width: 480px)',
-		xxsmall: '(max-width: 320px)'
-	});
-
-	$(function() {
-
-		var	$window = $(window),
-			$body = $('body');
-
-		// Disable animations/transitions until the page has loaded.
-			$body.addClass('is-loading');
-
-			$window.on('load', function() {
-				window.setTimeout(function() {
-					$body.removeClass('is-loading');
-				}, 250);
-			});
-
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
-
-		// Prioritize "important" elements on mobile.
-			skel.on('+mobile -mobile', function() {
-				$.prioritize(
-					'.important\\28 mobile\\29',
-					skel.breakpoint('mobile').active
-				);
-			});
-
-		// Scrolly.
-			$('.scrolly').scrolly();
-
-	});
-
-})(jQuery);
+$(function () {  'use strict';  $(document).scroll(function () {	  var $nav = $(".navbar-fixed-top");        var height_to_change = $(window).height()* 0.8;//    if ($(window).width()<=375){//      height_to_change = height_to_change * 0.8; //height for small screens / normal//    }    	  $nav.toggleClass('scrolled', $(this).scrollTop() > height_to_change);    //    var $hdr = $(".header a");//    $hdr.toggleClass('scrolled', $(this).scrollTop() > height_to_change);//    //    var $toggleBtn = $(".custom-toggler .navbar-toggler-icon");//    $toggleBtn.toggleClass('scrolled', $(this).scrollTop() > height_to_change);//    //    var $navbarToggler = $(".custom-toggler.navbar-toggler");//    $navbarToggler.toggleClass('scrolled', $(this).scrollTop() > height_to_change);    	});});
